@@ -1,0 +1,23 @@
+{
+  "cli": { "version": ">= 5.0.0" },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": { "simulator": false }
+    },
+    "production": {
+      "ios": { "autoIncrement": true },
+      "android": { "autoIncrement": true, "buildType": "apk" }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": { "appleId": "YOUR_APPLE_ID", "ascAppId": "YOUR_APP_ID" },
+      "android": { "serviceAccountKeyPath": "./service-account.json" }
+    }
+  }
+}
